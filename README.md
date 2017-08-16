@@ -2,7 +2,7 @@
 
 A little node app for experimenting with visualizing data on the web.
 
-![Demo](readme_images/index.png)
+![Demo](readme_images/index.PNG)
 
 ## Run the demo locally
 
