@@ -9,6 +9,8 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('localhost:27017/my_db');
 
+var d3 = require('d3');
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 var stocks = require('./routes/stocks');
