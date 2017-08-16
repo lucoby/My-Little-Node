@@ -31,8 +31,8 @@ prices = get_data(syms, dates)  # automatically adds SPY
 
 # Get daily portfolio value
 normed = prices / prices.iloc[0]
-normed['date'] = normed.index
+normed['date'] = normed.index.strftime('%d-%b-%y')
 print normed.head()
 
-normed.to_json('my-data.json',orient='records')
+normed.to_json('my_data.json',orient='records')
 # print normed.to_json(orient='records')

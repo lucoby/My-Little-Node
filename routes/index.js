@@ -2,12 +2,12 @@ var express = require('express');
 var router = express.Router();
 
 /* GET Userlist page. */
-router.get('/data', function(req, res) {
+router.get('/stocks', function(req, res) {
     var db = req.db;
-    var collection = db.get('my_data');
+    var collection = db.get('stocks');
     collection.find({},{},function(e,docs){
-        res.render('my_data', {
-            "my_data" : docs
+        res.render('stocks', {
+            "stocks" : docs
         });
     });
 });
