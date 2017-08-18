@@ -33,9 +33,12 @@ app.use(function(req,res,next){
     next();
 });
 
+app.get('/', function(req, res) {
+  res.render('index');
+});
 app.use('/old/', index);
 app.use('/old/users', users);
-app.use('/old/stocks', stocks);
+app.use('/stocks', stocks);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

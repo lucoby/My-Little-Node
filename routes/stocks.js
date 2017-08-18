@@ -4,7 +4,7 @@ var router = express.Router();
 /*
  * GET stocklist.
  */
-router.get('/stocklist', function(req, res) {
+router.get('/stockdata', function(req, res) {
     var db = req.db;
     var collection = db.get('stocks');
     collection.find({},{},function(e,docs){

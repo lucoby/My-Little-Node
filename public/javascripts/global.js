@@ -22,7 +22,7 @@ function populateTable() {
     var tableContent = '';
 
     // jQuery AJAX call for JSON
-    $.getJSON('/old/stocks/stocklist', function(data) {
+    $.getJSON('/stocks/stockdata', function(data) {
 
         stockData = data
 
