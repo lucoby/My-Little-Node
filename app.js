@@ -9,8 +9,6 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('localhost:27017/my_db');
 
-var d3 = require('d3');
-
 var index = require('./routes/index');
 var users = require('./routes/users');
 var stocks = require('./routes/stocks');
@@ -35,9 +33,9 @@ app.use(function(req,res,next){
     next();
 });
 
-app.use('/', index);
-app.use('/users', users);
-app.use('/stocks', stocks);
+app.use('/old/', index);
+app.use('/old/users', users);
+app.use('/old/stocks', stocks);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
